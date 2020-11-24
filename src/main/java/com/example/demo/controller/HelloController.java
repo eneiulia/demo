@@ -11,8 +11,8 @@ import java.net.UnknownHostException;
 @RestController
 public class HelloController {
 
-    @GetMapping("/test")
-    public InetAddress test() throws UnknownHostException {
-        return InetAddress.getLocalHost();
+    @GetMapping("/service1")
+    public String test() throws UnknownHostException {
+        return "Service 1 is hosted by the pod " + InetAddress.getLocalHost() + " !";
     }
 }
